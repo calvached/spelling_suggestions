@@ -1,7 +1,7 @@
 require 'suggester'
 
 describe Suggester do
-  xit 'suggests a term for a misspelled word' do
+  it 'suggests a term for a misspelled word' do
     word = 'hippatiochomonquipoletentians'
     terms = ['hepaticocholangiocholecystenterostomies', 'hippopotomonstrosesquipedalian']
 
@@ -9,5 +9,10 @@ describe Suggester do
   end
 
   it 'returns the Longest Common subsequence' do
+    word = 'numm'
+    term = 'nom'
+
+    expect(Suggester.common_chars(word, term)).to eq(2)
   end
+
 end
